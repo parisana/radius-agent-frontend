@@ -9,3 +9,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 ## Heroku server
  Navigate to 'https://afternoon-bastion-79809.herokuapp.com/'
  There you may enter any public github repo url to get the issues count.
+
+ ## Improvements:
+ Error handling both in front-end and backend. Security and Caching may also be implemented.
