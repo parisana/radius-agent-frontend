@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <input type="text" placeholder="Enter git url..." class="form-control" id="searchInput" [(ngModel)]="gitUrl" (keyup.enter)="search()">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <button (click)="search()" class="btn btn-success">Search</button>
+
+        </div>
+    </div>
+    <div class="table-wrapper">
+       <!-- head -->
+       <div class="row head">
+           <div class="col-md-6">Issue Type</div>
+           <div class="col-md-2 col-center">Count</div>
+       </div>
+       <!-- records -->
+       <div class="row records" >
+            <div class="col-md-6">Total number of open issues</div>
+            <div class="col-md-2 col-center">{{(resultData | async)?._0 || '-'}}</div>
+        </div>
+        <div class="row records">
+                <div class="col-md-6">Number of open issues that were opened in the last 24 hours</div>
+                <div class="col-md-2 col-center">{{(resultData | async)?._1 || '-'}}</div>
+        </div>
+        <div class="row records">
+                <div class="col-md-6">Number of open issues that were opened more than 24 hours ago but less than 7 days ago</div>
+                <div class="col-md-2 col-center">{{(resultData | async)?._2 || '-'}}</div>
+        </div>
+        <div class="row records">
+                <div class="col-md-6">Number of open issues that were opened more than 7 days ago </div>
+                <div class="col-md-2 col-center">{{(resultData | async)?._3 || '-' }}</div>
+        </div>
+    </div>
+
+</div>
+

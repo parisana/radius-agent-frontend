@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    margin-top: 3%;
+}
+.table-wrapper {
+    margin-top: 50px;
+}
+.row {
+    padding: 8px 0;
+}
+.head {
+    background:rgb(78, 78, 78);
+    /* border-bottom:2px solid grey; */
+    font-weight: 600;
+    color: #fff;
+}
+.records:nth-child(odd) {
+    background: rgb(229, 227, 209);;
+  }
+.col-center{
+    text-align: center;
+}
